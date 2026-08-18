@@ -9,11 +9,11 @@ import requests
 
 def get_location():
     try:
-        response = requests.get('https://ipinfo.io/json')
+        response = requests.get('http://ip-api.com/json/', timeout=5)
         data = response.json()
-        lat, lon = map(float, data['loc'].split(','))
-        return lat, lon, data.get('city', 'unknown')
-    except Exception:
+        return data['lat'], data['lon'], data.get('city', 'unknown')
+    except Exception as e:
+        print(f"Location lookup failed: {e}")
         return 3.8480, 11.5021, 'Yaoundé (default, location lookup failed)'
 
 if __name__ == "__main__":
