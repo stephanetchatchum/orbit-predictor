@@ -4,7 +4,7 @@ A tool that calculates a satellite's real position using orbital physics,
 not machine learning, then predicts when it will be visible from anywhere
 on Earth.
 
-**[Live demo not yet deployed, see Running It below]**
+**[Try the live demo](https://stephanetchatchum-orbit-predictor-app-vjyrql.streamlit.app/)**
 
 ## How This Differs From the Exoplanet Project
 
